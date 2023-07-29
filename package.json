@@ -10,12 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "module-alias": "^2.2.3",
     "next": "^13.4.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "unsplash-js": "^7.0.18",
-    "zustand": "^4.3.9",
-    "module-alias": "^2.2.3"
+    "zustand": "^4.3.9"
   },
   "devDependencies": {
     "@types/node": "20.4.5",

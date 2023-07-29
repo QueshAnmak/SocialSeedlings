@@ -1,0 +1,9 @@
+.counterGroup {
+    display: flex;
+    flex-direction: row;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+}

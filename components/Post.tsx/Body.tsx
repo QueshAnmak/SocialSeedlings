@@ -1,11 +1,21 @@
-import React from 'react'
+import MediaBox from "@components/MediaBox";
+import React from 'react';
 
-type Props = {}
+type Props = {
+  media: string,
+  description: string,
+};
 
-const Body = (props: Props) => {
+const Body = ( { media, description }: Props ) =>
+{
   return (
-    <div>Body</div>
-  )
-}
+    <div>
+      <MediaBox src={ media } />
+      <div>
+        {description}
+      </div>
+    </div>
+  );
+};
 
-export default Body
+export default Body;

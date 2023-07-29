@@ -1,8 +1,2 @@
-import Post from "../components/Post.tsx";
-
-export default function NewsFeed ()
-{
-    return (
-        <Post/>
-    );
-}
+import NewsFeed from "./newsFeed/page";
+export default NewsFeed;

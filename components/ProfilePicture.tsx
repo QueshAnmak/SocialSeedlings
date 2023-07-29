@@ -1,10 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
+import styles from './ProfilePicture.module.css';
 
-enum ProfilePictureSize
+export enum ProfilePictureSize
 {
-  SMALL = 'small',
-  MEDIUM = 'medium',
-  LARGE = 'large',
+  SMALL = '48',
+  MEDIUM = '64',
+  LARGE = '96',
 }
 
 type Props = {
@@ -12,14 +14,11 @@ type Props = {
   size?: ProfilePictureSize;
 };
 
-const ProfilePicture = ( { src, size=ProfilePictureSize.SMALL }: Props ) =>
+const ProfilePicture = ( { src, size = ProfilePictureSize.SMALL }: Props ) =>
 {
-  /**
-   * Image of the user.
-   */
   return (
-    <div>
-      <img src={ src } alt="" />
+    <div className={ `${ styles.profilePicture } ${ styles[size] }` }>
+      <Image className={styles.image} src={ src } alt="" width={size} height={size} />
     </div>
   );
 };

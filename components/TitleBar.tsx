@@ -5,7 +5,7 @@ type Props = {}
 const TitleBar = (props: Props) => {
   return (
       <section>
-        <h1>React TypeScript Boilerplate</h1>
+        <h1>SocialSeedlings</h1>
       </section>
   )
 }

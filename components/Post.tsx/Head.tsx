@@ -1,5 +1,7 @@
 import React from 'react';
-import ProfilePicture from "@components/ProfilePicture";
+import ProfilePicture, { ProfilePictureSize } from "@components/ProfilePicture";
+
+import styles from "./Head.module.css";
 
 type Props = {
   name: string;
@@ -16,6 +18,23 @@ const Head = ( { name, postedAt }: Props ) =>
    *    Posted At
    */
 
+  const postedAtRelative = getRelativeTime( postedAt );
+
+  return (
+    <div className={ styles.head }>
+      <ProfilePicture src="https://via.placeholder.com/150" size={ ProfilePictureSize.SMALL } />
+      <div>
+        <div >{ name }</div>
+        <div>{ postedAtRelative }</div>
+      </div>
+    </div>
+  );
+};
+
+export default Head;
+
+function getRelativeTime ( postedAt: Date )
+{
   const rtf = new Intl.RelativeTimeFormat( "en", {
     style: "narrow",
   } );
@@ -51,7 +70,8 @@ const Head = ( { name, postedAt }: Props ) =>
     {
       unitName = "month";
       unitValue = 2629743;
-    } else
+    }
+    else
     {
       unitName = "year";
       unitValue = 31556926;
@@ -66,18 +86,5 @@ const Head = ( { name, postedAt }: Props ) =>
   const postedAtSeconds = Math.round( ( ( postedAt.getTime() - Date.now() ) ) / 1000 );
   const { time, unit } = getUnit( postedAtSeconds );
   const postedAtRelative = rtf.format( time, unit );
-
-  console.log( { postedAtSeconds, postedAtRelative } );
-
-  return (
-    <div>
-      <ProfilePicture src="https://via.placeholder.com/150" />
-      <div>
-        <div>{ name }</div>
-        <div>{ postedAtRelative }</div>
-      </div>
-    </div>
-  );
-};
-
-export default Head;
+  return postedAtRelative;
+}
