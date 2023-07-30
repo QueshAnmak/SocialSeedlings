@@ -5,6 +5,7 @@ import { getRelativeTime } from "../../utils/getRelativeTime";
 import IconButton from "@components/IconButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
+import Link from "next/link";
 
 type Props = {
   profilePicture: string;
@@ -19,26 +20,33 @@ const Head = ( { profilePicture, name, postedAt }: Props ) =>
   return (
     <div className={ styles.head }>
 
-      <div className={ styles.headLeft }>
-        <ProfilePicture src={ profilePicture } size={ ProfilePictureSize.SMALL } />
+      <Link
+        href={ `/user/${ name.split( " " ).join( "" ) }` }
+        className="no-underline"
+      >
+        <div
+          className={ styles.headLeft }
+        >
+          <ProfilePicture src={ profilePicture } size={ ProfilePictureSize.SMALL } />
 
-        <div className={ styles.details }>
-          <div className={ styles.name }>
-            { name }
-          </div>
-          <div className={ styles.postedAt }>
-            { postedAtRelative }
+          <div className={ styles.details }>
+            <div className={ styles.name }>
+              { name }
+            </div>
+            <div className={ styles.postedAt }>
+              { postedAtRelative }
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
 
       <div className={ styles.icon }>
-      <IconButton
-        icon={
-          <FontAwesomeIcon icon={ faEllipsis } />
-        }
-        onClickHandler={ null }
-      />
+        <IconButton
+          icon={
+            <FontAwesomeIcon icon={ faEllipsis } />
+          }
+          onClickHandler={ null }
+        />
       </div>
     </div>
   );

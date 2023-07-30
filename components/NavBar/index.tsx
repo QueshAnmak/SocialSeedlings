@@ -1,7 +1,7 @@
 import React from 'react'
 import { PAGES } from '@app/constants'
 import NavItem from "@components/NavBar/NavItem";
-import styles from "./NavBar.module.css"
+import styles from "./index.module.css"
 
 type Props = {}
 

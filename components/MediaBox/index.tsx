@@ -16,6 +16,7 @@ const MediaBox = ( { src }: Props ) =>
             height={ 0 }
             sizes="100vw"
             style={ { width: '100%', height: 'auto' } }
+            loading="lazy"
         />
     );
 };

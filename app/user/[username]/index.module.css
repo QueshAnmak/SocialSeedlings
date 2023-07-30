@@ -3,5 +3,8 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    /* justify-content: center; */
+}
+
+.infiniteScroll{
+    min-width: 100%;
 }

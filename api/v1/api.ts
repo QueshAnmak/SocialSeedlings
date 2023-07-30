@@ -1,7 +1,7 @@
 import { createApi } from 'unsplash-js';
 import config from "../../config";
 
-console.log(config.api.accessKey);  
+console.log('accesskey', process.env.ACCESS_KEY);  
 
 const api = createApi({
   accessKey: 'B1FcXrk4liEneW2M-XXPhzWwaGizaQ6hsiI-cyfjpvs'//config.api.accessKey,

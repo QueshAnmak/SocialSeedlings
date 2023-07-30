@@ -1,0 +1,10 @@
+.bottomBar {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--middleground-color-translucent);
+    font-size: var(--font-size-xxlarge);
+}

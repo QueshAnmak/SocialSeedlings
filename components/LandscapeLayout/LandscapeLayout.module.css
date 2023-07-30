@@ -10,7 +10,7 @@
     display: flex;
     margin-left: var(--sidebar-width);
     /* width: calc(2*var(--page-width)); */
-    width: var(--page-width);
-    
+    max-width: var(--page-width);
+    min-width: var(--page-width);
     justify-content: center;
 }

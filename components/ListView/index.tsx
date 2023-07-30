@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './ListView.module.css';
-import Post from "@components/Post.tsx";
+import styles from './index.module.css';
+import Post from "@components/Post";
 
-type Props = {posts: any[]};
+type Props = { posts: any[]; };
 
 const ListView = ( { posts }: Props ) =>
 {
@@ -10,7 +10,7 @@ const ListView = ( { posts }: Props ) =>
         <section className={ styles.container }>
             {
                 posts.map(
-                    (post) => <Post postData={ post }/>
+                    ( post ) => <Post postData={ post } />
                 )
             }
         </section>

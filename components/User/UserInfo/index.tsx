@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './index.module.css';
 
-export function UserInfo ()
+type Props = {
+    userInfo: any;
+}
+
+export function UserInfo ({ userInfo }: Props)
 {
+    // const [userInfoData, setUserInfoData] = useState({
+    //     name: userInfo.name,
+    //     bio: userInfo.bio
+    // })
+
     return (
         <div className={ styles.userInfo }>
             <div className={ styles.fullname }>
-                John Doe
+                {userInfo.user.name}
             </div>
-            {/* <div className={ styles.username }>
-                johnny
-            </div> */}
             <div className={ styles.description }>
-                Lores ipsum dolor sit amet consectetur adipiscing elit.
+                {userInfo.user.bio}
             </div>
         </div>
     );

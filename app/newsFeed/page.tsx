@@ -1,6 +1,5 @@
 "use client";
 
-import Post from "@components/Post.tsx";
 import styles from "./index.module.css";
 import ListView from "@components/ListView";
 import { getRandomPhotos } from "../../api/v1/api";

@@ -1,0 +1,14 @@
+.navBar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+
+}
+
+@media (max-width: 480px) {
+	.navBar {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+}

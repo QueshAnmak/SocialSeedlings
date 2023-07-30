@@ -5,13 +5,13 @@ type Props = {
   children: React.ReactNode;
 };
 
-const SideBar = ( { children }: Props ) =>
+const BottomBar = ( { children }: Props ) =>
 {
   return (
-    <section className={ styles.sideBar }>
+    <section className={ styles.bottomBar }>
       { children }
     </section>
   );
 };
 
-export default SideBar;
+export default BottomBar;

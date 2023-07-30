@@ -21,3 +21,13 @@
 .name {
     padding: var(--padding-medium);
 }
+
+@media (max-width: 480px) {
+    .name {
+        display: none;
+    }
+
+    .icon {
+        font-size: var(--font-size-xxlarge);
+    }
+}

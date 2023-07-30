@@ -4,20 +4,22 @@ import { UserInfo } from "./UserInfo";
 import styles from "./index.module.css";
 import { UserStats } from "./UserStats";
 
-type Props = {};
+type Props = { userData };
 
-const User = ( { }: Props ) =>
+const User = ( { userData }: Props ) =>
 {
+    console.log( { userData } )
+    
     return (
         <section className={ styles.container }>
             <ProfilePicture
-                src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60"
+                src={ userData.user.profile_image.large }
                 size={ ProfilePictureSize.EXTRA_LARGE }
             />
 
-            <div className={styles.details}>
-                <UserInfo />
-                <UserStats />
+            <div className={ styles.details }>
+                <UserInfo userInfo={ userData } />
+                <UserStats userStats={ userData } />
             </div>
         </section>
     );

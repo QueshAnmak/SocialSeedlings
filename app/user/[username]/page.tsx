@@ -6,34 +6,48 @@ import styles from "./index.module.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useState, useEffect } from "react";
 import { getUserProfile } from "../../../api/v1/api";
+import { faBars, faGrip } from "@fortawesome/free-solid-svg-icons";
+import ListView from "@components/ListView";
+import { ViewSwitcher } from "@components/ViewSwitcher";
+
+const Views = [
+  {
+    name: 'List',
+    component: ListView,
+    icon: faBars
+  },
+  {
+    name: 'Grid',
+    component: GridView,
+    icon: faGrip
+  }
+];
 
 export default function Page ( { params }: { params: { username: string; }; } )
 {
-  const [ userData, setUserData ] = useState( {} );
+  const [ userData, setUserData ] = useState( null );
   const [ posts, setPosts ] = useState( [] );
 
   const getMorePhotos = () =>
   {
-    console.log( params.username );
-    return getUserProfile( params.username ).then(
+    getUserProfile( params.username ).then(
       ( resp ) =>
       {
         setPosts( [ ...posts, ...resp ] );
-        return resp;
+        setUserData( resp[ 0 ] );
       }
     );
   };
 
-  useEffect( () =>
-  {
-    const resp = getMorePhotos();
-    setUserData( resp[ 0 ] );
-  }, [] );
+  useEffect( getMorePhotos, [] );
+
+  console.log( { userData } );
+
 
   return (
     <section className={ styles.container }>
 
-      <User />
+      { userData && <User userData={ userData } /> }
 
       <InfiniteScroll
         dataLength={ posts.length }
@@ -41,8 +55,12 @@ export default function Page ( { params }: { params: { username: string; }; } )
         hasMore={ true }
         loader={ <p>Loading...</p> }
         endMessage={ <p>Yay! You have seen it all</p> }
+        className={ styles.infiniteScroll }
       >
-        <GridView posts={ posts } />
+        <ViewSwitcher
+          views={ Views }
+          posts={ posts }
+        />
       </InfiniteScroll>
 
     </section>

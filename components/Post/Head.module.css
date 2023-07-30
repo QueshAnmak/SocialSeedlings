@@ -11,6 +11,10 @@
     flex-direction: row;
 }
 
+.headLeft:hover {
+    cursor: pointer;
+}
+
 .icon {
     display: flexbox;
     align-items: center;

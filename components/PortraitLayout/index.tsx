@@ -1,13 +1,27 @@
 import React from 'react';
-import {title} from '@app/constants';
+import styles from './index.module.css';
+import BottomBar from "@components/BottomBar";
+import NavBar from "@components/NavBar";
+import { Title } from "public/StaticComps";
 
+interface Props
+{
+    children: React.ReactNode;
+}
 
-
-const Title = ( ) =>
+const PortraitLayout = ( { children } ) =>
 {
     return (
-        <button>{ title }</button>
+        <div className={ styles.layout }>
+            <Title />
+            <div className={ styles.main }>
+                { children }
+            </div>
+            <BottomBar>
+                <NavBar />
+            </BottomBar>
+        </div>
     );
 };
 
-export default Title;
+export default PortraitLayout;

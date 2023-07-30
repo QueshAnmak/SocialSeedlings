@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './index.module.css';
 
 const STATS = [
@@ -16,11 +16,26 @@ const STATS = [
     }
 ];
 
-export function UserStats ()
+export function UserStats ( { userStats }: { userStats: any; } )
 {
+    const [ stats, setStats ] = useState( [
+        {
+            name: 'Posts',
+            value: userStats.user.total_photos
+        },
+        {
+            name: 'Followers',
+            value: userStats.user.total_collections
+        },
+        {
+            name: 'Following',
+            value: userStats.user.total_likes
+        }
+    ] );
+
     return (
         <div className={ styles.stats }>
-            { STATS.map(
+            { stats.map(
                 ( stat ) =>
                     <Stat
                         name={ stat.name }
