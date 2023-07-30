@@ -6,6 +6,8 @@
     padding: 1px;
     min-width: min-content;
     min-height: min-content;
+    max-width: min-content;
+    max-height: min-content;
     border: 2px solid var(--accent-color);
     object-fit: cover;
     overflow: hidden;

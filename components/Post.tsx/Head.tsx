@@ -7,11 +7,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 
 type Props = {
+  profilePicture: string;
   name: string;
   postedAt: Date;
 };
 
-const Head = ( { name, postedAt }: Props ) =>
+const Head = ( { profilePicture, name, postedAt }: Props ) =>
 {
   const postedAtRelative = getRelativeTime( postedAt );
 
@@ -19,7 +20,7 @@ const Head = ( { name, postedAt }: Props ) =>
     <div className={ styles.head }>
 
       <div className={ styles.headLeft }>
-        <ProfilePicture src="https://via.placeholder.com/150" size={ ProfilePictureSize.SMALL } />
+        <ProfilePicture src={ profilePicture } size={ ProfilePictureSize.SMALL } />
 
         <div className={ styles.details }>
           <div className={ styles.name }>

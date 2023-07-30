@@ -10,7 +10,6 @@ import styles from "./Foot.module.css";
 type Props = {
   likes: number,
   comments: number,
-  description: string,
 };
 
 const buttons = [
@@ -31,7 +30,7 @@ const buttons = [
   }
 ];
 
-const Foot = ( { likes, comments, description }: Props ) =>
+const Foot = ( { likes, comments }: Props ) =>
 {
   const [ likesCount, setLikesCount ] = React.useState( likes );
   const [ commentsCount, setCommentsCount ] = React.useState( comments );

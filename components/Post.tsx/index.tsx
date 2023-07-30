@@ -4,32 +4,34 @@ import Body from './Body';
 import Foot from './Foot';
 import styles from './Post.module.css';
 
-type Props = { detailed?: boolean; };
+type Props = {
+    postData: any,
+    detailed?: boolean,
+};
 
-const Post = ( { detailed = true }: Props ) =>
+const Post = ( { postData, detailed = true }: Props ) =>
 {
     return (
-        <div className={styles.padding}>
+        <div className={ styles.padding }>
             <div className={ `
             ${ styles.container } 
             ${ detailed && styles.detailed }
             ` }>
                 { detailed &&
                     <Head
-                        name="Ahmad Dormat"
-                        postedAt={ new Date( 1689986245555 ) }
+                        profilePicture={ postData.urls.thumb }
+                        name={postData.user.name}
+                        postedAt={ new Date( postData.created_at ) }
                     />
                 }
                 <Body
-                    // media={ `https://fakeimg.pl/243x${ Math.floor(Math.random() * ( 400 - 100 ) + 100)}`}
-                    media="https://images.unsplash.com/photo-1689852484069-3e0fe82cc7c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                    media={ postData.urls.regular }
+                    description={postData.description}
                 />
                 { detailed &&
                     <Foot
-                        likes={ 123 }
-                        comments={ 12 }
-                        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                        likes={ postData.likes }
+                        comments={ postData.downloads }
                     />
                 }
             </div>
