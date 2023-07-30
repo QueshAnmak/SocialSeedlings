@@ -27,7 +27,7 @@ const PAGES = [
     },
     {
         name: 'Profile',
-        route: '/user/me',
+        route: '/user/cspek',
         icon: faUser,
     },
 ];
