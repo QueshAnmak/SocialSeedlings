@@ -1,0 +1,9 @@
+.title{
+    font-size: var(--font-size-xlarge);
+    padding: 12px;
+}
+
+.signature {
+    font-size: var(--font-size-small);
+    padding: 12px;
+}

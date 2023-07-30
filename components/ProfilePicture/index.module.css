@@ -1,0 +1,16 @@
+.profilePicture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1px;
+    min-width: min-content;
+    min-height: min-content;
+    border: 2px solid var(--accent-color);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.image {
+    border-radius: 50%;
+}

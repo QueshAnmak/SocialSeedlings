@@ -1,6 +1,8 @@
 import MediaBox from "@components/MediaBox";
 import React from 'react';
 
+import styles from "./Body.module.css";
+
 type Props = {
   media: string,
   description: string,
@@ -9,11 +11,11 @@ type Props = {
 const Body = ( { media, description }: Props ) =>
 {
   return (
-    <div>
+    <div className={ styles.body }>
       <MediaBox src={ media } />
-      <div>
-        {description}
-      </div>
+        <div className={ styles.description }>
+          { description }
+        </div>
     </div>
   );
 };

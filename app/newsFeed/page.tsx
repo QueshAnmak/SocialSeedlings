@@ -5,6 +5,8 @@ import ListView from "@components/ListView";
 export default function NewsFeed ()
 {
     return (
-        <ListView />
+        <section className={styles.container}>
+            <ListView />
+        </section>
     );
 }

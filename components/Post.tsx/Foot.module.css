@@ -1,9 +1,28 @@
+.buttonGroup {
+    padding: 8px 4px 0 4px;
+}
+
 .counterGroup {
     display: flex;
     flex-direction: row;
+    font-size: var(--font-size-small);
+    padding: 8px 0;
+
 }
 
 .counter {
     display: flex;
     flex-direction: row;
+    padding: 0 8px;
+}
+
+.counterCount {
+    font-weight: var(--font-weight-medium);
+    color: var(--secondary-text-color)
+}
+
+.counterName {
+    font-weight: var(--font-weight-nomral);
+    color: var(--tertiary-text-color);
+    padding: 0 0 0 2px ;
 }

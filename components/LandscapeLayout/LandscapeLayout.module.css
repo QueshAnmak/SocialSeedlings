@@ -1,0 +1,16 @@
+.layout {
+    --sidebar-width: 240px;
+    --page-width: 640px;
+
+    display: flex;
+    width: 100%;
+}
+
+.main{
+    display: flex;
+    margin-left: var(--sidebar-width);
+    /* width: calc(2*var(--page-width)); */
+    width: var(--page-width);
+    
+    justify-content: center;
+}

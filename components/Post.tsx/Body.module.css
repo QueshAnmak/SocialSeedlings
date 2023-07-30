@@ -1,0 +1,16 @@
+.body {
+	position: relative;	
+	overflow: hidden;
+	border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+}
+
+.description {
+	position: absolute;
+	transform: translateY(-100%);
+	background-color: var(--middleground-color-translucent);
+	padding: 8px;
+	width: 100%;
+	height: min-content;
+	font-size: var(--font-size-medium);
+	backdrop-filter: blur(8px);
+}

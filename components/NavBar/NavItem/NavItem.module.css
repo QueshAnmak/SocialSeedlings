@@ -1,0 +1,23 @@
+.navItem {
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+    color: var(--secondary-text-color);
+    padding: 8px 12px;
+    font-size: var(--font-size-medium);
+    border: 0;
+}
+
+.navItem:hover {
+    cursor: pointer;
+    background-color: var(--middleground-color);
+    color: var(--primary-text-color);
+}
+
+.icon {
+    width: var(--font-size-large);
+}
+
+.name {
+    padding: var(--padding-medium);
+}

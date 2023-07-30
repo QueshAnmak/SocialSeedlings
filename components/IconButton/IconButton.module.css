@@ -1,0 +1,13 @@
+.iconButton {
+    color: var(--secondary-text-color);
+    background-color: transparent;
+    border-radius: var(--border-radius-small);
+    padding: 4px 8px;
+    border: 0;
+    font-size: var(--font-size-large);
+}
+
+.iconButton:hover {
+    cursor: pointer;
+    color: var(--primary-text-color);
+}

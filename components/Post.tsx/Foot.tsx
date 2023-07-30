@@ -3,7 +3,7 @@
 import React from 'react';
 import IconButton from "@components/IconButton";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faComment, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faComment, faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 
 import styles from "./Foot.module.css";
 
@@ -48,8 +48,8 @@ const Foot = ( { likes, comments, description }: Props ) =>
   ];
 
   return (
-    <div>
-      <div>
+    <div className={styles.foot}>
+      <div className={styles.buttonGroup}>
         {
           // button group
           buttons.map(
@@ -83,8 +83,8 @@ function Counter ( { name, count }: { name: string, count: number; } )
 {
   return (
     <div className={ styles.counter }>
-      <div>{ count }</div>
-      <div>{ name }</div>
+      <div className={ styles.counterCount }>{ count }</div>
+      <div className={ styles.counterName }>{ name }</div>
     </div>
   );
 }

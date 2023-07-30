@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './ListView.module.css';
-import Post from "./Post.tsx";
+import Post from "@components/Post.tsx";
 
-type Props = {};
+type Props = {posts: []};
 
-const ListView = ( { }: Props ) =>
+const ListView = ( { posts }: Props ) =>
 {
     return (
         <section className={ styles.container }>

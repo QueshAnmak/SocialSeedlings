@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import styles from "./IconButton.module.css";
 
 type Props = {
   icon,
@@ -12,7 +12,7 @@ type Props = {
 const IconButton = ( { icon, onClickHandler }: Props ) =>
 {
   return (
-    <button onClick={ onClickHandler }>
+    <button className={styles.iconButton} onClick={ onClickHandler }>
       { icon }
     </button>
   );

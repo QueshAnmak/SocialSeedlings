@@ -1,0 +1,17 @@
+.container {
+    display: flexbox;
+    /* width: calc(0.67*var(--page-width)); */
+    width:100%;
+    flex-direction: column;
+    border-radius: var(--border-radius-large);
+    overflow: hidden;
+}
+
+.container.detailed {
+    background-color: var(--middleground-color);
+    padding: 8px;
+}
+
+.padding{
+    padding: 8px;
+}
