@@ -1,18 +1,18 @@
 "use client";
 
 import React from 'react';
-import IconButton from "@components/IconButton";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faComment, faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 
 import styles from "./Foot.module.css";
+import ButtonGroup from "../ButtonGroup";
 
 type Props = {
   likes: number,
   comments: number,
 };
 
-const buttons = [
+const BUTTONS = [
   {
     name: 'like',
     icon: <FontAwesomeIcon icon={ faHeart } />,
@@ -47,22 +47,9 @@ const Foot = ( { likes, comments }: Props ) =>
   ];
 
   return (
-    <div className={styles.foot}>
+    <div className={ styles.foot }>
       <div className={styles.buttonGroup}>
-        {
-          // button group
-          buttons.map(
-            ( buttonData ) =>
-            {
-              const { icon, onClickHandler } = buttonData;
-              return (
-                <IconButton
-                  icon={ icon }
-                  onClickHandler={ onClickHandler }
-                />
-              );
-            } )
-        }
+        <ButtonGroup buttons={ BUTTONS } />
       </div>
 
       <div className={ styles.counterGroup }>
@@ -70,8 +57,6 @@ const Foot = ( { likes, comments }: Props ) =>
         •
         <Counter name="Comments" count={ commentsCount } />
       </div>
-
-      {/* <div>{ description }</div> */ }
     </div>
   );
 };

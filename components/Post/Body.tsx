@@ -24,9 +24,10 @@ const Body = ( { mediaData, description, detailed=true }: Props ) =>
         blurhash={ mediaData.blur_hash }
         bg={ detailed }  
       />
-        {/* <div className={ styles.description }>
+      { description &&
+        <div className={ styles.description }>
           { description }
-        </div> */}
+        </div>}
     </div>
   );
 };

@@ -40,7 +40,7 @@ export default function RootLayout (
 
     return (
         <html lang="en" className={ comfortaa.className }>
-            <body>
+            <body className="dark">
                 <Layout>
                     { children }
                 </Layout>

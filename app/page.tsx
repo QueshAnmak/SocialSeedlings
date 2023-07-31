@@ -1,2 +1,2 @@
-import NewsFeed from "./newsFeed/page";
+import NewsFeed from "./newsfeed/page";
 export default NewsFeed;

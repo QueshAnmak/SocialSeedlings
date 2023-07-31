@@ -10,6 +10,12 @@
     width: 100%;
 }
 
+.buttonGroup {
+    display: flex;
+    font-size: var(--font-size-large);
+    padding-left: 6px;
+}
+
 @media (min-width: 480px) {
     .layout {
         --list-view-post-width: calc(0.67*var(--page-width));

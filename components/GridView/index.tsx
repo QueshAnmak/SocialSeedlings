@@ -9,7 +9,6 @@ const GridView = ( { posts }: Props ) =>
 {
     return (
         <section className={ styles.container }>
-            {/* <div className={ styles.grid }> */ }
             <Masonry
                 className={ styles.grid }
                 breakpointCols={ 2 }
@@ -21,7 +20,6 @@ const GridView = ( { posts }: Props ) =>
                     )
                 }
             </Masonry>
-            {/* </div> */}
         </section>
     );
 };

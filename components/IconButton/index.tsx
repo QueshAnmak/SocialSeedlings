@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from "./IconButton.module.css";
+import styles from "./index.module.css";
 
 type Props = {
   icon,

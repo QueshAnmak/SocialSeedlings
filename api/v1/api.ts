@@ -1,8 +1,6 @@
 import { createApi } from 'unsplash-js';
 import config from "../../config";
 
-console.log('accesskey', process.env.ACCESS_KEY);  
-
 const api = createApi({
   accessKey: 'B1FcXrk4liEneW2M-XXPhzWwaGizaQ6hsiI-cyfjpvs'//config.api.accessKey,
 } );
@@ -10,11 +8,10 @@ const api = createApi({
 /**
  * Get random photos. This function will cache the data, and will only be called once to limit api usage. Ideally, whenever the function is called the photoCache should be updated.
  */
-
 export const getRandomPhotos = async ( { count=10}:{count: number} ) => {
   const cacheId = `photosCache`;
 
-  let photosCache: any = localStorage.getItem( 'photosCache' );
+  let photosCache: any = localStorage.getItem( cacheId );
   
   if ( photosCache ) {
     photosCache = JSON.parse( photosCache );
@@ -31,7 +28,7 @@ export const getRandomPhotos = async ( { count=10}:{count: number} ) => {
   const data = resp.response;
 
   localStorage.setItem(
-    'photosCache',
+    cacheId,
     JSON.stringify( {
       expiryTime: Date.now() + 3.156e+10,
       data: data

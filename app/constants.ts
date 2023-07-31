@@ -9,7 +9,7 @@ export interface Page {
     icon: any;
 }
 
-const PAGES = [
+export const PAGES = [
     {
         name: 'NewsFeed',
         route: '/',
@@ -31,5 +31,3 @@ const PAGES = [
         icon: faUser,
     },
 ];
-
-export { PAGES };

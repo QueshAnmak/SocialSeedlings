@@ -6,11 +6,13 @@
 
 .description {
 	position: absolute;
-	transform: translateY(-100%);
+	transform: translateY(-99%);
 	background-color: var(--middleground-color-translucent);
 	padding: 8px;
-	/* width: 100%;
-	height: min-content; */
+	width: 100%;
+	height: min-content;
+	/* add text ellipsis */
+	text-overflow: ellipsis;
 	font-size: var(--font-size-medium);
 	backdrop-filter: blur(8px);
 }

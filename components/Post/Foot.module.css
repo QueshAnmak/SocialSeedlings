@@ -1,11 +1,12 @@
 .buttonGroup {
-    padding: 8px 4px 0 4px;
+    padding:8px 4px 0 4px;
+    font-size: var(--font-size-large);
 }
 
 .counterGroup {
     display: flex;
     flex-direction: row;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-medium);
     padding: 8px 0;
 
 }

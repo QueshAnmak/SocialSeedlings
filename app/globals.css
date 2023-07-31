@@ -1,16 +1,17 @@
 html {
-    --background-color: rgba(27, 26, 29, 1);
-    --middleground-color: rgba(43, 45, 46, 1);
-    --foreground-color: rgba(61, 63, 65, 1);
+    --background-color: rgb(255, 255, 255);
+    --middleground-color: rgb(245, 246, 250);
+    --foreground-color: rgb(208, 212, 221);
 
-    --background-color-translucent: rgba(27, 26, 29, 0.84);
-    --middleground-color-translucent: rgba(43, 45, 46, 0.84);
-    --foreground-color-translucent: rgba(61, 63, 65, 0.84);
-    --accent-color: rgb(63, 140, 251);
+    --background-color-translucent: rgba(255, 255, 255, 0.64);
+    --middleground-color-translucent: rgb(245, 246, 250, 0.64);
+    --foreground-color-translucent: rgb(208, 212, 221, 0.64);
 
-    --primary-text-color: rgb(255, 255, 255);
-    --secondary-text-color: rgb(168, 169, 169);
-    --tertiary-text-color: rgb(112, 112, 114);
+    --accent-color: rgb(47, 128, 237);
+
+    --primary-text-color: rgb(0,0,0);
+    --secondary-text-color: #3d3d4e ;
+    --tertiary-text-color: #6e6d7a;
 
     --border-radius-xsmall: 4px;
     --border-radius-small: 8px;
@@ -45,6 +46,21 @@ html {
     --profile-picture-size-extra-large: 192px;
 }
 
+.dark {
+    --background-color: rgba(27, 26, 29, 1);
+    --middleground-color: rgba(43, 45, 46, 1);
+    --foreground-color: rgba(61, 63, 65, 1);
+
+    --background-color-translucent: rgba(27, 26, 29, 0.64);
+    --middleground-color-translucent: rgba(43, 45, 46, 0.64);
+    --foreground-color-translucent: rgba(61, 63, 65, 0.64);
+    --accent-color: rgb(63, 140, 251);
+
+    --primary-text-color: rgb(255, 255, 255);
+    --secondary-text-color: rgb(168, 169, 169);
+    --tertiary-text-color: rgb(112, 112, 114);
+}
+
 body, html {
   height: 100%;
   margin: 0;
@@ -62,3 +78,5 @@ body {
 .no-underline {
     text-decoration: none;
 }
+
+a { color: inherit; } 
