@@ -5,6 +5,7 @@ import ListView from "@components/ListView";
 import { getRandomPhotos } from "../../api/v1/api";
 import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
+import Head from "next/head";
 
 export default function NewsFeed ()
 {
@@ -23,16 +24,25 @@ export default function NewsFeed ()
     useEffect( getMorePhotos, [] );
 
     return (
-        <section className={ styles.container }>
-            <InfiniteScroll
-                dataLength={ posts.length }
-                next={ getMorePhotos }
-                hasMore={ true }
-                loader={ <p>Loading...</p> }
-                endMessage={ <p>Yay! You have seen it all</p> }
-            >
-                <ListView posts={ posts } />
-            </InfiniteScroll>
-        </section>
+        <>
+            <Head>
+                <title>
+                    News Feed
+                </title>
+            </Head>
+
+            <section className={ styles.container }>
+                <InfiniteScroll
+                    dataLength={ posts.length }
+                    next={ getMorePhotos }
+                    hasMore={ true }
+                    loader={ <p>Loading...</p> }
+                    endMessage={ <p>Yay! You have seen it all</p> }
+                    className={ styles.infiniteScroll }
+                >
+                    <ListView posts={ posts } />
+                </InfiniteScroll>
+            </section>
+        </>
     );
 }

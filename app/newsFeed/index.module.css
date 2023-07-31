@@ -1,3 +1,11 @@
-.container {
-    width: calc(0.67*var(--page-width));
+@media (min-width: 480px) {
+    .container {
+        --listview-post-width: calc(0.67*var(--page-width));
+        
+        width: var(--listview-post-width);
+    }
+}
+
+.infiniteScroll {
+    width: 100%;
 }

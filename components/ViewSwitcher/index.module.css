@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 100%;
+    /* min-width: 90%; */
+    max-width: 96%;
 }
 
 .viewSwitcherBar { 
     display: flex;
-    min-width: 98%;
+    min-width: 100%;
     flex-direction: row;
     height: 64px;
     margin: 0 8px 8px 8px;
@@ -52,12 +53,22 @@
 }
 
 .List {
-    width: 70%;
+    --listview-post-width: calc(0.67*var(--page-width));
+    width: var(--listview-post-width);
+            
     align-items: center;
     justify-content: center;
 }
 
 @media (max-width: 480px) {
+    .viewSwitcherBar {
+        height: 48px;
+        margin: 0 8px 8px 8px;
+    }
+    .viewSwitcher{
+
+        min-width: 90%;
+    }
     .List {
         width: 100%;
     }

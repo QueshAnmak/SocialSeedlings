@@ -12,10 +12,11 @@ export enum ProfilePictureSize
 
 type Props = {
   src: string;
+  alt: string;
   size?: ProfilePictureSize;
 };
 
-const ProfilePicture = ( { src, size = ProfilePictureSize.SMALL }: Props ) =>
+const ProfilePicture = ( { src, alt, size = ProfilePictureSize.SMALL }: Props ) =>
 {
   return (
     <div className={
@@ -24,11 +25,12 @@ const ProfilePicture = ( { src, size = ProfilePictureSize.SMALL }: Props ) =>
     >
       <Image
         src={ src }
-        alt=""
+        alt={ alt }
         className={styles.image}
         width={size}
         height={ size }
         objectFit="cover"
+        loading="lazy"
       />
       </div>
   );

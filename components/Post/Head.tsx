@@ -1,7 +1,7 @@
 import React from 'react';
 import ProfilePicture, { ProfilePictureSize } from "@components/ProfilePicture";
 import styles from "./Head.module.css";
-import { getRelativeTime } from "../../utils/getRelativeTime";
+import getRelativeTime from "../../utils/getRelativeTime";
 import IconButton from "@components/IconButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
@@ -21,13 +21,17 @@ const Head = ( { profilePicture, name, postedAt }: Props ) =>
     <div className={ styles.head }>
 
       <Link
-        href={ `/user/${ name.split( " " ).join( "" ) }` }
+        href={ `/user/${ name }` }
         className="no-underline"
       >
         <div
           className={ styles.headLeft }
         >
-          <ProfilePicture src={ profilePicture } size={ ProfilePictureSize.SMALL } />
+          <ProfilePicture
+            src={ profilePicture }
+            // alt is first letter of name
+            alt={ name[ 0 ].toUpperCase() }
+            size={ ProfilePictureSize.SMALL } />
 
           <div className={ styles.details }>
             <div className={ styles.name }>

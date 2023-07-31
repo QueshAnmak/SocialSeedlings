@@ -2,7 +2,7 @@ import React from 'react';
 import SideBar from "@components/SideBar";
 import { Title, Signature } from "public/StaticComps";
 import NavBar from "@components/NavBar";
-import styles from './LandscapeLayout.module.css';
+import styles from './index.module.css';
 
 interface Props
 {

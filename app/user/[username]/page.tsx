@@ -53,7 +53,8 @@ export default function Page ( { params }: { params: { username: string; }; } )
         dataLength={ posts.length }
         next={ getMorePhotos }
         hasMore={ true }
-        loader={ <p>Loading...</p> }
+        // loader={ <p>Loading...</p> }
+        loader={ '' }
         endMessage={ <p>Yay! You have seen it all</p> }
         className={ styles.infiniteScroll }
       >

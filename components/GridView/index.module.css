@@ -1,9 +1,17 @@
 .container {
-    width: 100%;
+    /* width: 100%; */
+    max-width: var(--page-width, 100%);
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .grid { 
   display: flex;
-  width: auto;
+  width: 100%;
+}
+
+.grid-col { 
+  display: flex;
+  min-width: 100%;
 }

@@ -41,9 +41,6 @@ export default function RootLayout (
     return (
         <html lang="en" className={ comfortaa.className }>
             <body>
-                {/* <LandscapeLayout>
-                    { children }
-                </LandscapeLayout> */}
                 <Layout>
                     { children }
                 </Layout>

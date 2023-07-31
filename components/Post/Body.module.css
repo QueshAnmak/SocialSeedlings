@@ -9,8 +9,22 @@
 	transform: translateY(-100%);
 	background-color: var(--middleground-color-translucent);
 	padding: 8px;
-	width: 100%;
-	height: min-content;
+	/* width: 100%;
+	height: min-content; */
 	font-size: var(--font-size-medium);
 	backdrop-filter: blur(8px);
+}
+
+.detailed {
+	/* width: 500px; */
+	/* width: var(0.67*var(--page-width)); */
+	height: var(--list-view-post-height);
+}
+
+.compact {
+	/* width: 500px; */
+	/* width: var(0.67*var(--page-width)); */
+	/* height: 100%; */
+	width: var(calc(0.5*var(--page-width)));
+	height: var(calc(0.7*var(--page-width)));
 }

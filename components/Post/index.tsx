@@ -2,7 +2,7 @@ import React from 'react';
 import Head from './Head';
 import Body from './Body';
 import Foot from './Foot';
-import styles from './Post.module.css';
+import styles from './index.module.css';
 
 type Props = {
     postData: any,
@@ -20,13 +20,14 @@ const Post = ( { postData, detailed = true }: Props ) =>
                 { detailed &&
                     <Head
                         profilePicture={ postData.urls.thumb }
-                        name={postData.user.name}
+                        name={postData.user.username}
                         postedAt={ new Date( postData.created_at ) }
                     />
                 }
                 <Body
-                    media={ postData.urls.regular }
-                    description={postData.description}
+                    mediaData={ postData }
+                    description={ postData.description }
+                    detailed={ detailed }
                 />
                 { detailed &&
                     <Foot

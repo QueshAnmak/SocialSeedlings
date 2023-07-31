@@ -14,6 +14,7 @@ const User = ( { userData }: Props ) =>
         <section className={ styles.container }>
             <ProfilePicture
                 src={ userData.user.profile_image.large }
+                alt={ userData.user.name[0].toUpperCase() }
                 size={ ProfilePictureSize.EXTRA_LARGE }
             />
 

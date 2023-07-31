@@ -1,6 +1,6 @@
 import capitalizeSentence from "./capitalizeSentence";
 
-export function getRelativeTime ( postedAt: Date )
+export default function getRelativeTime ( postedAt: Date )
 {
     const rtf = new Intl.RelativeTimeFormat( "en", {
         style: "long",
@@ -53,7 +53,7 @@ export function getRelativeTime ( postedAt: Date )
 
     const postedAtSeconds = Math.round( ( ( postedAt.getTime() - Date.now() ) ) / 1000 );
     const { time, unit } = getUnit( postedAtSeconds );
-    const postedAtRelative = capitalizeSentence(rtf.format( time, unit ));
+    const postedAtRelative = capitalizeSentence( rtf.format( time, unit ) );
 
     return postedAtRelative;
 }

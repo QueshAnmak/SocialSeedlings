@@ -10,7 +10,8 @@ const ListView = ( { posts }: Props ) =>
         <section className={ styles.container }>
             {
                 posts.map(
-                    ( post ) => <Post postData={ post } />
+                    ( post ) =>
+                        <Post postData={ post } />
                 )
             }
         </section>
