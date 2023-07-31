@@ -23,7 +23,7 @@ const Views = [
   }
 ];
 
-export default function Page ( { params }: { params: { username: string; }; } )
+export default function UserPage ( { params }: { params: { username: string; }; } )
 {
   const [ userData, setUserData ] = useState( null );
   const [ posts, setPosts ] = useState( [] );
