@@ -2,8 +2,9 @@ import { createApi } from 'unsplash-js';
 import config from "../../config";
 
 const api = createApi({
-  accessKey: 'B1FcXrk4liEneW2M-XXPhzWwaGizaQ6hsiI-cyfjpvs'//config.api.accessKey,
+  accessKey: config.api.accessKey,
 } );
+
 
 /**
  * Get random photos. This function will cache the data, and will only be called once to limit api usage. Ideally, whenever the function is called the photoCache should be updated.

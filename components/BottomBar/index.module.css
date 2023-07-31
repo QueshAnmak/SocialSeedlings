@@ -7,4 +7,5 @@
     width: 100%;
     background-color: var(--middleground-color-translucent);
     font-size: var(--font-size-xxlarge);
+    border-bottom: 5px solid var(--middleground-color-translucent);
 }

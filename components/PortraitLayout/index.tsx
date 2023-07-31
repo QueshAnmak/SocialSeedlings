@@ -3,6 +3,7 @@ import styles from './index.module.css';
 import BottomBar from "@components/BottomBar";
 import NavBar from "@components/NavBar";
 import { Title } from "public/StaticComps";
+import ThemeSwitcher from "../ThemeSwitcher";
 
 interface Props
 {
@@ -13,7 +14,10 @@ const PortraitLayout = ( { children } ) =>
 {
     return (
         <div className={ styles.layout }>
-            <Title />
+            <div className={ styles.topBar }>
+                <Title />
+                <ThemeSwitcher />
+            </div>
             <div className={ styles.main }>
                 { children }
             </div>

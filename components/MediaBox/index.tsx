@@ -18,10 +18,8 @@ const MediaBox = ( { src, alt = '', blurhash = '', bg = false }: Props ) =>
         <div className={ styles.box }>
 
             <Blurhash
-                hash={ blurhash }
-                // height={ bg ? 600 : 440 }
-                // width={ bg ? 400 : 300 }
-                width={500}
+                hash={ blurhash } 
+                width={ 500 }
                 height={ 700 }
                 className={`
                     ${styles.blurhash }
@@ -29,11 +27,8 @@ const MediaBox = ( { src, alt = '', blurhash = '', bg = false }: Props ) =>
                  `}
                 style={ {
                     position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    // width: '500px',
-                    // height: '700px',
-                    // marginRight: "-700px",
+                    // top: 0,
+                    // left: 0,
                 } }
             />
            

@@ -1,6 +1,6 @@
 const config = {
     api: {
-        accessKey: process.env.ACCESS_KEY,
+        accessKey: process.env.NEXT_PUBLIC_ACCESS_KEY,
     },
     links: {
         'github': 'https://github.com',

@@ -32,7 +32,7 @@ const Post = ( { postData, detailed = true }: Props ) =>
                 { detailed &&
                     <Foot
                         likes={ postData.likes }
-                        comments={ postData.downloads }
+                        comments={ postData.user.total_likes }
                     />
                 }
             </div>
